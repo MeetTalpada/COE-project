@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhast Restaurant</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f4f4f4, #d4d4d4); /* Initial background gradient */
+            color: #333; /* Dark text for readability */
+            line-height: 1.6;
+        }
+        header {
+            background-color: #fff; /* Solid white header */
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 5px;
+        }
+        header h1 span {
+            display: inline-block;
+        }
+        header h1 span:nth-child(1) { color: #D4AF37; } /* Gold */
+        header h1 span:nth-child(2) { color: #6C5B7B; } /* Purple */
+        header h1 span:nth-child(3) { color: #88B04B; } /* Green */
+        header h1 span:nth-child(4) { color: #FF6F61; } /* Coral */
+        header h1 span:nth-child(5) { color: #92A8D1; } /* Blue */
+        header .subtext {
+            font-size: 0.8rem;
+            color: #666; /* Subdued text color */
+            margin-top: 10px;
+            letter-spacing: 5px;
+        }
+        header .subtext span {
+            display: inline-block;
+            width: 80px;
+            text-align: center;
+        }
+        header .subtext span:nth-child(1) { color: #666; }
+        header .subtext span:nth-child(1) b { color: #D4AF37; }
+        header .subtext span:nth-child(2) { color: #666; }
+        header .subtext span:nth-child(2) h { color: #6C5B7B; }
+        header .subtext span:nth-child(3) { color: #666; }
+        header .subtext span:nth-child(3) a { color: #88B04B; }
+        header .subtext span:nth-child(4) { color: #666; }
+        header .subtext span:nth-child(4) s { color: #FF6F61; }
+        header .subtext span:nth-child(5) { color: #666; }
+        header .subtext span:nth-child(5) t { color: #92A8D1; }
+        .main-container {
+            padding: 20px;
+            max-width: 1200px; /* Slightly wider for better use of space */
+            margin: 0 auto;
+        }
+        section {
+            margin-bottom: 40px;
+            background-color: #fff; /* Solid white sections */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #D4AF37; /* Gold accent */
+            display: inline-block;
+            padding-bottom: 5px;
+            color: #333; /* Dark text for contrast */
+        }
+        .menu-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .menu-item img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        .menu-item h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #6C5B7B; /* Purple for headings */
+        }
+        .menu-item p {
+            margin: 5px 0;
+            color: #666; /* Subdued text color */
+        }
+        .reservation-form input,
+        .reservation-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff; /* Solid white inputs */
+            color: #333; /* Dark text for contrast */
+        }
+        .reservation-form button {
+            background-color: #D4AF37; /* Gold button */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .reservation-form button:hover {
+            background-color: #C0A037; /* Darker gold on hover */
+        }
+        .review {
+            margin-bottom: 20px;
+        }
+        .review h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #6C5B7B; /* Purple for headings */
+        }
+        .review p {
+            margin: 5px 0;
+            color: #666; /* Subdued text color */
+        }
+        iframe {
+            width: 100%;
+            height: 450px;
+            border: 0;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            <span>B</span>
+            <span>H</span>
+            <span>A</span>
+            <span>S</span>
+            <span>T</span>
+        </h1>
+        <div class="subtext">
+            <span><b>B</b>havna</span>
+            <span>K<b>h</b>usbu</span>
+            <span>S<b>w</b>ad</span>
+            <span>S<b>w</b>asthya</span>
+            <span>S<b>u</b>rat</span>
+        </div>
+    </header>
+    <div class="main-container">
+        <section id="home">
+            <h2>Welcome to Bhast Restaurant</h2>
+            <p>Experience the finest dining with a blend of traditional and modern cuisine. Our chefs use only the freshest ingredients to create dishes that delight your senses.</p>
+            <!-- Google Maps iframe added here -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6594494.524049986!2d117.05426159865227!3d36.191659362162795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357e19ec0a760aef%3A0x876ac44ba101f44b!2sSongsan%20restaurant!5e0!3m2!1sen!2sin!4v1740218698997!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        <section id="menu">
+            <h2>Menu</h2>
+            <div class="menu-item">
+                <img src="https://th.bing.com/th/id/OIP.5KX9kZPX8kEkyeaLxBErFAHaE8?w=287&h=191&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Ratatouille">
+                <div>
+                    <h3>Ratatouille</h3>
+                    <p>A traditional French Provençal stewed vegetable dish, originating from Nice.</p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="https://th.bing.com/th/id/OIP.ymVxogdnrcb3OdXrKMwEcgHaGP?w=208&h=175&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Butter Chicken">
+                <div>
+                    <h3>Butter Chicken</h3>
+                    <p>A classic Indian dish made with tender chicken cooked in a creamy tomato sauce.</p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="https://th.bing.com/th?id=OSK.c8741fc3c4a4ca1f95a86b748a7843ce&w=194&h=145&rs=2&qlt=80&o=6&cdv=1&dpr=1.3&pid=16.1" alt="Spaghetti Carbonara">
+                <div>
+                    <h3>Spaghetti Carbonara</h3>
+                    <p>An Italian pasta dish made with eggs, cheese, pancetta, and pepper.</p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="https://th.bing.com/th?id=OSK.f8c10a04c08a2ff17dd463aa883c7376&w=194&h=293&rs=2&qlt=80&o=6&cdv=1&dpr=1.3&pid=16.1" alt="Vegetable Biryani">
+                <div>
+                    <h3>Vegetable Biryani</h3>
+                    <p>A fragrant Indian rice dish made with basmati rice, vegetables, and aromatic spices.</p>
+                </div>
+            </div>
+        </section>
+        <section id="reservation">
+            <h2>Reservation</h2>
+            <div class="reservation-form">
+                <form>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="date" placeholder="Date" required>
+                    <input type="time" placeholder="Time" required>
+                    <textarea placeholder="Special Requests" rows="4"></textarea>
+                    <button type="submit">Submit Reservation</button>
+                </form>
+            </div>
+        </section>
+        <section id="reviews">
+            <h2>Customer Reviews</h2>
+            <div class="review">
+                <h3>Erwin Smith</h3>
+                <p>Amazing food and great service! Will definitely come back. (Well... that did not aged well)</p>
+            </div>
+            <div class="review">
+                <h3>Jane Smith</h3>
+                <p>The ambiance is wonderful, and the dishes are delicious.</p>
+            </div>
+            <div class="review">
+                <h3>Mike Johnson</h3>
+                <p>Best restaurant in town. Highly recommended!</p>
+            </div>
+            <div class="review">
+                <h3>Anton Ego</h3>
+                <p>"Ratatouille that brings back memories... but not better than the mouse's ratatouille."</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
